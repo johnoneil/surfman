@@ -115,15 +115,14 @@ impl Device {
 
     /// Returns the OpenGL API flavor that this device supports (OpenGL or OpenGL ES).
     #[inline]
-    #[cfg(feature = "linux-generic-gles")]
     pub fn gl_api(&self) -> GLApi {
         GLApi::GLES
     }
 
-    /// Returns the OpenGL API flavor that this device supports (OpenGL or OpenGL ES).
-    #[inline]
-    #[cfg(not(feature = "linux-generic-gles"))]
-    pub fn gl_api(&self) -> GLApi {
-        GLApi::GL
-    }
+    // Returns the OpenGL API flavor that this device supports (OpenGL or OpenGL ES).
+    // #[inline]
+    // #[cfg(not(feature = "linux-generic-gles"))]
+    // pub fn gl_api(&self) -> GLApi {
+    //     GLApi::GL
+    // }
 }

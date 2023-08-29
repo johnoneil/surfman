@@ -86,17 +86,16 @@ impl Connection {
 
     /// Returns the OpenGL API flavor that this connection supports (OpenGL or OpenGL ES).
     #[inline]
-    #[cfg(feature = "linux-generic-gles")]
     pub fn gl_api(&self) -> GLApi {
         GLApi::GLES
     }
 
     /// Returns the OpenGL API flavor that this connection supports (OpenGL or OpenGL ES).
-    #[inline]
-    #[cfg(not(feature = "linux-generic-gles"))]
-    pub fn gl_api(&self) -> GLApi {
-        GLApi::GL
-    }
+    // #[inline]
+    // #[cfg(not(feature = "linux-generic-gles"))]
+    // pub fn gl_api(&self) -> GLApi {
+    //     GLApi::GL
+    // }
 
     /// Returns the "best" adapter on this system, preferring high-performance hardware adapters.
     ///
