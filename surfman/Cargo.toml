@@ -28,6 +28,7 @@ sm-wayland-default = []
 sm-winit = ["winit"]
 sm-x11 = ["x11"]
 sm-raw-window-handle = ["raw-window-handle"]
+linux-generic-gles = []
 
 [dependencies]
 bitflags = "1.1"
